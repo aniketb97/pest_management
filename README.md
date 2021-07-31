@@ -2,7 +2,10 @@
 
 [![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Community](https://img.shields.io/badge/Join-Community-blue)](https://developer.ibm.com/callforcode/get-started/) [![Website](https://img.shields.io/badge/View-Website-blue)](https://sample-project.s3-web.us-east.cloud-object-storage.appdomain.cloud/)
 
-Pests can be defined as insects or organisms that threaten crops. One of the major area of concern to handle during the growing phase of the crop is pest control and management. As pest impact crops growth, quality of the produce controlling and managing needs to be done with almost important. "Pest Pro" is an innovative way to identify and give sustainable solutions to manage these pests. 
+Pests can be defined as insects or organisms that threaten crops. One of the major area of concern to handle during the 
+growing phase of the crop is pest control and management. 
+As pest impact crops growth, quality of the produce controlling and managing needs to be done with almost 
+important. _**"Pest Pro"**_ is an innovative way to identify and give sustainable solutions to manage these pests. 
 
 ## Contents
 
@@ -25,12 +28,12 @@ Pests can be defined as insects or organisms that threaten crops. One of the maj
 
 ### What's the problem?
 
-**Heavy use of pesticides in farms** :\
-Lack of knowledge about pests and sustainable practices to handle it.\
-**Data Unavailability** :\
-A central data source for all the pests currently does not exist. There is a need for an image data bank of different types of pests.\
-**Language Barrier** :\
-Farmers need to be educated about pests in their colloquial terms or local language.
+- **Heavy use of pesticides in farms** :
+  - Lack of knowledge about pests and sustainable practices to handle it.
+- **Data Unavailability** :
+  - A central data source for all the pests currently does not exist. There is a need for an image data bank of different types of pests.
+- **Language Barrier** :
+  - Farmers need to be educated about pests in their colloquial terms or local language.
 
 ### How can AI help?
 
