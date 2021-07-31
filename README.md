@@ -92,7 +92,7 @@ You can find a running system to test at [this link](https://3.7.103.170/pestman
 
 All authors:  
 - [Jagadisa Padhy](https://github.com/jagadish4893) (Team Leader)  
-- Shreyas Gawande  
+- [Shreyas Gawande](https://github.com/shreyasmakerslab)
 - [Aniket Banginwar](https://github.com/aniketb97)
 
 
