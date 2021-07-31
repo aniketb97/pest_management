@@ -7,7 +7,6 @@ To control pests and handle crops by providing right information to farmers thro
 Our aim is to educate farmers by providing such information to handle problem statements.
 Pest management provides such information to farmers through a WhatsApp channel.
 
-[Project website](https://sample-project.s3-web.us-east.cloud-object-storage.appdomain.cloud/)
 
 ## Scope
 
