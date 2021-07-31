@@ -16,7 +16,6 @@ Pests can be defined as insects or organisms that threaten crops. One of the maj
   - [The architecture](#the-architecture)
   - [Long description](#long-description)
   - [Project roadmap](#project-roadmap)
-  - [Getting started](#getting-started)
   - [Live demo](#live-demo)
   - [Authors](#authors)
   - [License](#license)
@@ -29,9 +28,9 @@ Pests can be defined as insects or organisms that threaten crops. One of the maj
 **Heavy use of pesticides in farms** :\
 Lack of knowledge about pests and sustainable practices to handle it.\
 **Data Unavailability** :\
-A central data source for all the pests currentlydoes not exist. There is a need for an image data bank of different types of pests.\
+A central data source for all the pests currently does not exist. There is a need for an image data bank of different types of pests.\
 **Language Barrier** :\
-Farmers need to be educated about pests in theircolloquial terms or local language.
+Farmers need to be educated about pests in their colloquial terms or local language.
 
 ### How can AI help?
 
@@ -49,11 +48,12 @@ Vision based pest identification and control solution enables identification of 
 
 [Demo Video available here.](./Demo_Video.mp4)
 
-[Youtube link to demo video.](https://youtu.be/VuGPAZwr_D4). Please change resolution if video is distorted. (Recommended: 480p)
+[Youtube link to demo video.](https://youtu.be/VuGPAZwr_D4)  
+Please change resolution if video is distorted. (Recommended: 480p)
 
 ## The architecture
 
-![Video transcription/translation app](https://github.com/aniketb97/pest_management/blob/main/Architecture.png)
+![Pest Pro Architecture](https://github.com/aniketb97/pest_management/blob/main/Architecture.png)
 
 1. All incoming message transactions will be track.
 2. Will collect non-predicted images.
@@ -66,7 +66,7 @@ Vision based pest identification and control solution enables identification of 
 
 ## Long description
 
-[More detail is available here](./DESCRIPTION.md)
+[Click here for long description.](./DESCRIPTION.md)
 
 ## Project roadmap
 
@@ -88,13 +88,12 @@ You can find a running system to test at [this link](https://3.7.103.170/pestman
 
 <a href="https://github.com/aniketb97/pest_management/graphs/contributors">
   <img src="https://contributors-img.web.app/image?repo=aniketb97/pest_management" />
-</a>
+</a>  
 
-
-All authors:
-[Jagadisa Padhy](https://github.com/jagadish4893) (Team Leader)  
-Shreyas Gawande  
-[Aniket Banginwar](https://github.com/aniketb97)
+All authors:  
+- [Jagadisa Padhy](https://github.com/jagadish4893) (Team Leader)  
+- Shreyas Gawande  
+- [Aniket Banginwar](https://github.com/aniketb97)
 
 
 ## License
