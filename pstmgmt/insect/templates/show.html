@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+        <!-- Main row -->
+        <div class="row">
+          <div class="col-md-12">
+            <!-- TABLE: LATEST ORDERS -->
+            <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">View Insect</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table m-0" >
+                    <thead class="thead-dark">
+                    <tr>
+                      <th >Insect Name</th>
+                      <th>Status</th>
+                      <th>Created by</th>
+                      <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                      {% for info in information %}
+                      <tr>
+                        <td>{{info.insect_name}}</td>
+                        <td>{{info.status}}</td>
+                        <td>{{info.created_by}}</td>
+
+                        <td>
+                        <a href="{% url 'insect:show_info_insect' info.id %}"><i class="fa fa-eye" aria-hidden="true"></i></a> &nbsp;
+                        <a href="{% url 'insect:edit_insect' info.id %}" ><i class="fa fa-edit" aria-hidden="true"></i></a> &nbsp;&nbsp;&nbsp;
+                        <a href="{% url 'insect:delete_insect' info.id %}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                      </td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                    <tbody>
+
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td><span class="badge badge-success"></span></td>
+                      <td>
+                        <div class="sparkbar" data-color="#00a65a" data-height="20"></div>
+                      </td>
+                    </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!--/. container-fluid -->
+    </section>
+    <!-- /.content -->
+
+{% endblock %}
+

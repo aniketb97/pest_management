@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+                 <h1 class="m-0 text-dark">Dashboard</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="">Home</a></li>
+                <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Info boxes -->
+        <div class="row">
+<!--          <div class="col-12 col-sm-6 col-md-3">-->
+<!--            <div class="info-box">-->
+<!--              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>-->
+
+<!--              <div class="info-box-content">-->
+<!--                <span class="info-box-text">CPU Traffic</span>-->
+<!--                <span class="info-box-number">-->
+<!--                  10-->
+<!--                  <small>%</small>-->
+<!--                </span>-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /.info-box-content &ndash;&gt;-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /.info-box &ndash;&gt;-->
+<!--          </div>-->
+          <!-- /.col -->
+<!--          <div class="col-12 col-sm-6 col-md-3">-->
+<!--            <div class="info-box mb-3">-->
+<!--              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>-->
+
+<!--              <div class="info-box-content">-->
+<!--                <span class="info-box-text">Likes</span>-->
+<!--                <span class="info-box-number">41,410</span>-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /.info-box-content &ndash;&gt;-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /.info-box &ndash;&gt;-->
+<!--          </div>-->
+          <!-- /.col -->
+
+          <!-- fix for small devices only -->
+          <div class="clearfix hidden-md-up"></div>
+
+          <div class="col-12 col-sm-6 col-md-6">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-boxes"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Total Insects</span>
+                <span class="info-box-number"><a href="{% url 'insect:show_insect' %}"> {{total_insect}} </a></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <div class="col-12 col-sm-6 col-md-6">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-boxes"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Total Insect Information</span>
+                  <span class="info-box-number"><a href="{% url 'insect:view_insect' %}">{{total_insect_info}}</a></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+<div class="col-12 col-sm-6 col-md-6">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-boxes"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Total Transactions</span>
+                  <span class="info-box-number"><a href="{% url 'insect:transaction_report' %}">{{total_trans}}</a></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+<!--          <div class="col-12 col-sm-6 col-md-3">-->
+<!--            <div class="info-box mb-3">-->
+<!--              <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>-->
+
+<!--              <div class="info-box-content">-->
+<!--                <span class="info-box-text">New Members</span>-->
+<!--                <span class="info-box-number">2,000</span>-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /.info-box-content &ndash;&gt;-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /.info-box &ndash;&gt;-->
+<!--          </div>-->
+          <!-- /.col -->
+        </div>
+
+        <!-- Main row -->
+
+        <div class="row">
+          <div class="col-md-12">
+            <!-- TABLE: LATEST ORDERS -->
+            <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">Latest Insects</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table m-0">
+                    <thead>
+                    <tr>
+                      <th>Insect Name</th>
+                      <th>Status</th>
+                      <th>Created By</th>
+                      <th>Options</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    {% for info in information %}
+                      <tr>
+                        <td>{{info.insect_name}}</td>
+                        <td>{{info.status}}</td>
+                         <td>{{info.created_by}}</td>
+
+                        <td>
+                        <!--a href='javascript:void(0);' onclick="view_object({{i.id}})"><i class="fa fa-eye" aria-hidden="true"></i></--a> &nbsp;&nbsp;&nbsp;-->
+                        <a href="{% url 'insect:edit_insect' info.id %}" ><i class="fa fa-edit" aria-hidden="true"></i></a> &nbsp;&nbsp;&nbsp;
+                        <a href="{% url 'insect:delete_insect' info.id %}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                      </td>
+                      </tr>
+                    {% endfor %}
+
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <a href="{% url 'insect:insert_ins' %}" class="btn btn-sm btn-info float-left">Add New Insect</a>
+                <a href="{% url 'insect:show_insect' %}" class="btn btn-sm btn-secondary float-right">View All Insects</a>
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!--/. container-fluid -->
+    </section>
+    <!-- /.content -->
+
+{% endblock %}

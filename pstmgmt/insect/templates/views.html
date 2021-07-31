@@ -1,0 +1,128 @@
+{%  extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+        <!-- Main row -->
+        <div class="row">
+          <div class="col-md-12">
+            <!-- TABLE: LATEST ORDERS -->
+            <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="text-center">Insect Information</h3>
+                  <em>Total: {{information|length}}</em>
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table m-0 table-bordered table-striped table-hover">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th>Insect Name</th>
+                        <th>Host Plants</th>
+                        <!--<th>Host Plant Types</th>
+                        <th>Lifecycle</th>-->
+                        <th>Bionomics</th>
+                        <!--<th>Shape</th>
+                        <th>Growth rate</th>
+                        <th>Damage</th>-->
+                        <th>Symptoms</th>
+                        <!--<th>Natural Enemy</th>
+                        <th>ETL</th>
+                        <th>Size</th>-->
+                        <th>Colour</th>
+                        <!--<th>Species</th>
+                        <th>Examples/Types</th>
+                        <th>Favourable Condition</th>
+                        <th>Soil Type</th>
+                        <th>Peak Occurance</th>
+                        <th>Region</th>-->
+                        <th>Reproduction</th>
+                        <th>Preventive Measures</th>
+                        <!--<th>Insectiside</th>
+                        <th>IPM techniques</th>
+                        <th>Speciality</th>-->
+                        <th>Options</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for info in information %}
+                        <tr>
+                          <td>{{info.insect_name}}</td>
+                          <td>{{info.host_plant}}</td>
+                          <!--<td>{{info.host_plant_type}}</td>
+                          <td>{{info.lifecycle}}</td>-->
+                          <td>{{info.bionomics}}</td>
+                          <!--<td>{{info.shape}}</td>
+                          <td>{{info.growth_rate}}</td>
+                          <td>{{info.damage}}</td>-->
+                          <td>{{info.symptoms}}</td>
+                          <!--<td>{{info.natural_enemies}}</td>
+                          <td>{{info.etl}}</td>
+                          <td>{{info.size}}</td>-->
+                          <td>{{info.colour}}</td>
+                          <!--<td>{{info.species}}</td>
+                          <td>{{info.species_example}}</td>
+                          <td>{{info.favourable_condition}}</td>
+                          <td>{{info.soil_type}}</td>
+                          <td>{{info.peak_occurance}}</td>
+                          <td>{{info.region}}</td>-->
+                          <td>{{info.reproduction}}</td>
+                          <td>{{info.preventive_measures}}</td>
+                          <!--<td>{{info.insectiside}}</td>
+                          <td>{{info.ipm_techniques}}</td>
+                          <td>{{info.speciality}}</td>-->
+                          <td>
+                            <a href="{% url 'insect:view_info' info.id %}"><i class="fa fa-eye" aria-hidden="true"></i></a> &nbsp;&nbsp;&nbsp;
+                            <a href="{% url 'insect:update' info.id %}"><i class="fa fa-edit" aria-hidden="true"></i></a> &nbsp;&nbsp;&nbsp;
+                            <a href="{% url 'insect:delete' info.id %}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <!--<td></td>
+                          <td></td>
+                          <td><span class="badge badge-success"></span></td>
+                          <td>
+                          <div class="sparkbar" data-color="#00a65a" data-height="20"></div>
+                          </td>-->
+
+                        </tr>
+                      {% endfor %}
+
+                    </tbody>
+                    <tbody>
+
+
+
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!--/. container-fluid -->
+    </section>
+    <!-- /.content -->
+
+{% endblock %}
+

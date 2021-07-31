@@ -1,0 +1,57 @@
+ant
+aphid
+apple tree borer
+bambo weevil
+bee
+beetle
+berry borer
+bug
+butterfly
+bollworm
+cabage looper
+caddisfly
+caterpillar
+centipede
+cockroach
+cricket
+damselfly
+dragonfly
+earwig
+flea beetle
+flies
+fruit and shoot borer
+fruit fly
+grasshopper
+hairy caterpillar
+katydid
+lacewing bug
+leaf cutter
+leaf miner
+leaf roller
+leaf twisting weevil
+mango nut weevil
+mango hopper
+mantis
+mealybug
+mormon cricket
+moth
+millipede
+net winged insect
+pod sucking bug
+red mite
+rhizome weevil
+root borer
+root weevil
+sawfly
+scale insect
+slug
+snail
+spider
+spider mite
+stem borer
+termite
+thrips
+truefly
+wasp
+weevil
+white stem borer

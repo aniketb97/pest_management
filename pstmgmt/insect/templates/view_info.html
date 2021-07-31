@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    .description_separator {
+        padding: 8px;
+        font-weight: 400;
+        text-align: left;
+        background: #343a40;
+        color: #fff;
+    }
+
+     label {
+        display: inline-block;
+        width: 350px;
+        text-align: left;
+      }
+
+</style>
+
+<h3 style="color:green; text-align:center;">{{ msg }}</h3>
+<section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>View Information</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">View Information</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+<section class="content">
+    <div class="container-fluid">
+        <!-- /.row -->
+
+        <div class="row">
+
+          <!-- ./col -->
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <i class="fas fa-text-width"></i>
+                    &nbsp&nbsp&nbsp<b>{{information.insect_name}}</b>
+                </h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <dl class="row">
+                  <dt class="col-sm-4">Name of Host Plants</dt>
+                  <dd class="col-sm-8">{{information.host_plant}}</dd>
+                  <dt class="col-sm-4">Name of Host Plant Types</dt>
+                  <dd class="col-sm-8">{{information.host_plant_type}}</dd>
+                  <dd class="col-sm-8 offset-sm-4"></dd>
+                  <dt class="col-sm-4">Lifecycle</dt>
+                  <dd class="col-sm-8">{{information.lifecycle}}</dd>
+                  <dt class="col-sm-4">Bionomics</dt>
+                  <dd class="col-sm-8">{{information.bionomics}}</dd>
+                    <dt class="col-sm-4">Shape</dt>
+                  <dd class="col-sm-8">{{information.shape}}</dd>
+                    <dt class="col-sm-4">Growth rate</dt>
+                  <dd class="col-sm-8">{{information.growth_rate}}</dd>
+                    <dt class="col-sm-4">Damage</dt>
+                  <dd class="col-sm-8">{{information.damage}}</dd>
+                    <dt class="col-sm-4">Symptoms</dt>
+                  <dd class="col-sm-8">{{information.symptoms}}</dd>
+                    <dt class="col-sm-4">Natural Enemy</dt>
+                  <dd class="col-sm-8">{{information.natural_enemies}}</dd>
+                    <dt class="col-sm-4">ETL</dt>
+                  <dd class="col-sm-8">{{information.etl}}</dd>
+                    <dt class="col-sm-4">Size</dt>
+                  <dd class="col-sm-8">{{information.size}}</dd>
+                    <dt class="col-sm-4">Colour</dt>
+                  <dd class="col-sm-8">{{information.colour}}</dd>
+                    <dt class="col-sm-4">Species</dt>
+                  <dd class="col-sm-8">{{information.species}}</dd>
+                    <dt class="col-sm-4">Examples/Types</dt>
+                  <dd class="col-sm-8">{{information.species_example}}</dd>
+                    <dt class="col-sm-4">Favourable Condition</dt>
+                  <dd class="col-sm-8">{{information.favourable_condition}}</dd>
+                    <dt class="col-sm-4">Soil Type</dt>
+                  <dd class="col-sm-8">{{information.soil_type}}</dd>
+                    <dt class="col-sm-4">Peak Occurance</dt>
+                  <dd class="col-sm-8">{{information.peak_occurance}}</dd>
+                    <dt class="col-sm-4">Region</dt>
+                  <dd class="col-sm-8">{{information.region}}</dd>
+                    <dt class="col-sm-4">Reproduction</dt>
+                  <dd class="col-sm-8">{{information.reproduction}}</dd>
+                    <dt class="col-sm-4">Preventive Measures</dt>
+                  <dd class="col-sm-8">{{information.preventive_measures}}</dd>
+                    <dt class="col-sm-4">Insectiside</dt>
+                  <dd class="col-sm-8">{{information.insectiside}}</dd>
+                    <dt class="col-sm-4">IPM Techniques</dt>
+                  <dd class="col-sm-8">{{information.ipm_techniques}}</dd>
+                    <dt class="col-sm-4">Speciality</dt>
+                  <dd class="col-sm-8">{{information.speciality}}</dd>
+
+                </dl>
+              </div>
+              <!-- /.card-body -->
+
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+    </div>
+
+</section>
+<script>
+$(document).ready(function () {
+bsCustomFileInput.init();
+});
+</script>
+<script>
+function showField(){
+  var checkBox = document.getElementById("connected_gov_agency");
+  var text = document.getElementById("agency_detail");
+  if (checkBox.checked == true)
+    text.style.display = "block";
+  else
+    text.style.display = "none";
+}
+</script>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+{% endblock %}

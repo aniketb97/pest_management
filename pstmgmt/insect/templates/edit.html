@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    .description_separator {
+        padding: 8px;
+        font-weight: 400;
+        text-align: left;
+        background: #343a40;
+        color: #fff;
+    }
+
+    .required label:after {
+    content:" *";
+    color: red;"
+
+</style>
+
+<h3 style="color:green; text-align:center;">{{ msg }}</h3>
+
+<section class="content">
+    <div aria-labelledby="add-tab" class="tab-pane fade show active" id="update_product" role="tabpanel">
+        <form id="product_form" method="post" enctype="multipart/form-data" action="{% url 'insect:edit_insect' information.id %}">
+            {% csrf_token %}
+            <div class="card-body">
+                <h4 class="description_separator">Edit Insect Information</h4><br>
+<!--                <div class="form-group">-->
+<!--                    <label for="supplier_id">Supplier ID</label>-->
+<!--                    &lt;!&ndash; TODO: revert back to username here &ndash;&gt;-->
+<!--                    <input class="form-control" id="supplier_id" name="supplier_id" placeholder="Enter Supplier ID"-->
+<!--                           readonly type="text" value="{{request.session.username}}">-->
+<!--                </div>-->
+                <div class="row" id="message">
+                <div class="col">
+                {% if messages %}
+                {% for message in messages %} &nbsp
+                <h6 > {{message}} </h6>
+                {% endfor %}
+                {% endif %}
+                </div>
+                </div>
+
+                <div class="required">
+                <div class="form-group">
+                    <label for="insect_name">Insect Name</label>
+                    <input class="form-control" id="insect_name" name="insect_name" placeholder="Enter Insect name" required
+                           type="text" value="{{information.insect_name}}">
+                </div>
+                </div>
+                <div class="form-group" >
+                    <label for="status">Status</label>
+                    <select name="status" id = "status">
+                        <!--option disabled="true" selected>--Select Status--</option-->
+                        <option value ="active">Active</option>
+                         <option value ="inactive">Inactive</option>
+                    </select>
+
+                </div>
+
+
+
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer" style="text-align:center;">
+                <button class="btn btn-primary" type="Submit" value="update" name = "Update" style="background-color:#343a40;border-color:#343a40;">Update</button>
+            </div>
+        </form>
+    </div>
+</section>
+<script>
+$(document).ready(function () {
+bsCustomFileInput.init();
+});
+</script>
+<script>
+function showField(){
+  var checkBox = document.getElementById("connected_gov_agency");
+  var text = document.getElementById("agency_detail");
+  if (checkBox.checked == true)
+    text.style.display = "block";
+  else
+    text.style.display = "none";
+}
+</script>
+
+
+{% endblock %}
+

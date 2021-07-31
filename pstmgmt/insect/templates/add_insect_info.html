@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    .description_separator {
+        padding: 8px;
+        font-weight: 400;
+        text-align: left;
+        background: #343a40;
+        color: #fff;
+    }
+
+</style>
+
+<h3 style="color:green; text-align:center;">{{ msg }}</h3>
+
+<section class="content">
+    <div aria-labelledby="add-tab" class="tab-pane fade show active" id="add_product" role="tabpanel">
+        <form id="product_form" method="post" enctype="multipart/form-data" action="{% url 'insect:add_new_insect' %}">
+            {% csrf_token %}
+            <div class="card-body">
+                <h4 class="description_separator">Insect Information</h4><br>
+<!--                <div class="form-group">-->
+<!--                    <label for="supplier_id">Supplier ID</label>-->
+<!--                    &lt;!&ndash; TODO: revert back to username here &ndash;&gt;-->
+<!--                    <input class="form-control" id="supplier_id" name="supplier_id" placeholder="Enter Supplier ID"-->
+<!--                           readonly type="text" value="{{request.session.username}}">-->
+<!--                </div>-->
+                 <div class="row" >
+                <div class="col" id="message_id">
+                    {% if messages %}
+                        {% for message in messages %} &nbsp
+                            <h6 > {{message}} </h6>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+                <div class="required">
+                    <label for="insect_name">Insect Name</label>
+                    <p>
+                    <select name="insect_name" class="form-control">
+                        {% for data in insect %}
+                        <option value="{{data.id}}">{{data.insect_name}}</option>
+                        {% endfor %}
+                    </select>
+                    </p>
+                </div>
+                <div class="required">
+                    <label for="host_plant">Name of Host Plants</label>
+                    <input class="form-control" id="host_plant" name="host_plant"
+                           placeholder="Enter Host Plants" pattern="[A-Za-z ]+.{2,}" title="only letters" required
+                           type="text">
+                </div>
+
+                <div class="form-group">
+                    <label for="host_plant_type">Name of Host Plant Types</label>
+                    <input class="form-control" id="host_plant_type" name="host_plant_type"
+                           placeholder="Enter Host Plant Types" pattern="[A-Za-z ]+.{2,}" title="only letters"
+                           type="text">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="lifecycle">Lifecycle</label>
+                    <input class="form-control" id="lifecycle" name="lifecycle"
+                              placeholder="Enter lifecycle information" pattern="[A-Za-z0-9_]+.{2,}" title="enter valid lifecycle e.g: 3 months" >
+                </div>
+
+                <div class="required">
+                    <label for="bionomics">Bionomics</label>
+                    <input class="form-control" id="bionomics" name="bionomics"
+                              placeholder="Enter bionomics information" pattern="[A-Za-z0-9]+.{2,}" title="enter valid bionomics" required>
+                </div>
+                <div class="form-group">
+                    <label for="shape">Shape</label>
+                    <input class="form-control" id="shape" name="shape"
+                              placeholder="Describe shape" pattern="[A-Za-z]+.{2,}" title="only letters">
+                </div>
+                <div class="form-group">
+                    <label for="growth_rate">Growth rate</label>
+                    <input class="form-control" id="growth_rate" name="growth_rate"
+                              placeholder="Enter growth rate information" pattern="[A-Za-z0-9]+.{2,}" title="only letters">
+                </div>
+                <div class="form-group">
+                    <label for="damage">Damage</label>
+                    <input class="form-control" id="damage" name="damage"
+                              placeholder="Enter damage information" pattern="[A-Za-z0-9]+.{2,}" title="enter valid information" >
+                </div>
+                <div class="required">
+                    <label for="symptoms">Symptoms</label>
+                    <input class="form-control" id="symptoms" name="symptoms"
+                              placeholder="Enter symptoms" pattern="[A-Za-z0-9]+.{2,}" title="enter valid information" required>
+                </div>
+                <div class="form-group">
+                    <label for="natural_enemies">Natural Enemy</label>
+                    <input class="form-control" id="natural_enemies" name="natural_enemies"
+                              placeholder="Enter natural enemies" pattern="[A-Za-z0-9]+.{2,}" title="enter valid information">
+                </div>
+                <div class="form-group">
+                    <label for="etl">ETL</label>
+                    <input class="form-control" id="etl" name="etl"
+                              placeholder="Enter Economic Threshold Level" pattern="[0-9]+(\.[0-9][0-9]?)?" title="enter valid value">
+                </div>
+                <div class="form-group">
+                    <label for="size">Size</label>
+                    <input class="form-control" id="size" name="size"
+                              placeholder="Enter size" pattern="[A-Za-z]+.{2,}" title="enter valid value">
+                </div>
+                <div class="required">
+                    <label for="colour">Colour</label>
+                    <input class="form-control" id="colour" name="colour"
+                              placeholder="Enter colour"  pattern="[A-Za-z]+.{2,}" title="enter valid colour" required>
+                </div>
+                <div class="form-group">
+                    <label for="species">Species</label>
+                    <input class="form-control" id="species" name="species"
+                              placeholder="Enter species information" pattern="[A-Za-z0-9]+.{2,}" title="enter valid information">
+                </div>
+                <div class="form-group">
+                    <label for="species_example">Examples/Types</label>
+                    <input class="form-control" id="species_example" name="species_example"
+                              placeholder="Enter species example" pattern="[A-Za-z0-9]+.{2,}" title="enter valid information" >
+                </div>
+                <div class="required">
+                    <label for="favourable_condition">Favourable Condition</label>
+                    <input class="form-control" id="favourable_condition" name="favourable_condition"
+                              placeholder="Enter favourable condition" pattern="[A-Za-z0-9]+.{2,}" title="enter valid information" required>
+                </div>
+                <div class="form-group">
+                    <label for="soil_type">Soil Type</label>
+                    <input class="form-control" id="soil_type" name="soil_type"
+                              placeholder="Enter soil type information" pattern="[A-Za-z0-9]+.{2,}" title="enter valid information">
+                </div>
+                <div class="form-group">
+                    <label for="peak_occurance">Peak Occurance</label>
+                    <input class="form-control" id="peak_occurance" name="peak_occurance"
+                              placeholder="Enter peak occurance" pattern="[A-Za-z0-9]+.{2,}" title="enter valid information" >
+                </div>
+                <div class="form-group">
+                    <label for="region">Region</label>
+                    <input class="form-control" id="region" name="region"
+                              placeholder="Enter region" pattern="[A-Za-z]+.{2,}" title="enter valid information" >
+                </div>
+                <div class="required">
+                    <label for="reproduction">Reproduction</label>
+                    <input class="form-control" id="reproduction" name="reproduction"
+                              placeholder="Enter reproduction information" pattern="[A-Za-z0-9]+.{2,}" title="enter valid information" required>
+                </div>
+                <div class="required">
+                    <label for="preventive_measures">Preventive Measures</label>
+                    <input class="form-control" id="preventive_measures" name="preventive_measures"
+                              placeholder="Enter preventive measures" pattern="[A-Za-z0-9]+.{2,}" title="enter valid information" required>
+                </div>
+                <div class="required">
+                    <label for="insectiside">Insectiside</label>
+                    <input class="form-control" id="insectiside" name="insectiside"
+                              placeholder="Enter insectiside information" pattern="[A-Za-z0-9]+.{2,}" title="enter valid information" required>
+                </div>
+                <div class="form-group">
+                    <label for="ipm_techniques">IPM techniques</label>
+                    <input class="form-control" id="ipm_techniques" name="ipm_techniques"
+                              placeholder="Enter ipm techniques " pattern="[A-Za-z0-9]+.{2,}" title="enter valid information" >
+                </div>
+                <div class="form-group">
+                    <label for="speciality">Speciality</label>
+                    <input class="form-control" id="speciality" name="speciality"
+                              placeholder="Enter speciality" pattern="[A-Za-z0-9]+.{2,}" title="enter valid information">
+                </div>
+
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer" style="text-align:center;">
+                <button class="btn btn-primary" type="submit" style="background-color:#343a40;border-color:#343a40;">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</section>
+<style>
+  .required label:after {
+    content:" *";
+    color: red;
+  }
+</style>
+<script>
+$(document).ready(function () {
+bsCustomFileInput.init();
+});
+</script>
+<script>
+function showField(){
+  var checkBox = document.getElementById("connected_gov_agency");
+  var text = document.getElementById("agency_detail");
+  if (checkBox.checked == true)
+    text.style.display = "block";
+  else
+    text.style.display = "none";
+}
+</script>
+{% endblock %}
