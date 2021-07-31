@@ -1,6 +1,6 @@
 # Pest Pro - Pest Management Solution
 
-[![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Community](https://img.shields.io/badge/Join-Community-blue)](https://developer.ibm.com/callforcode/get-started/) [![Website](https://img.shields.io/badge/View-Website-blue)](https://sample-project.s3-web.us-east.cloud-object-storage.appdomain.cloud/)
+[![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Website](https://img.shields.io/badge/View-Website-blue)](https://3.7.103.170/pestmanagement/)
 
 Pests can be defined as insects or organisms that threaten crops. One of the major area of concern to handle during the 
 growing phase of the crop is pest control and management. 
