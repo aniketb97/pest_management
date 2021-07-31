@@ -18,9 +18,6 @@ Pests can be defined as insects or organisms that threaten crops. One of the maj
   - [Project roadmap](#project-roadmap)
   - [Getting started](#getting-started)
   - [Live demo](#live-demo)
-  - [Built with](#built-with)
-  - [Contributing](#contributing)
-  - [Versioning](#versioning)
   - [Authors](#authors)
   - [License](#license)
   - [Acknowledgments](#acknowledgments)
@@ -50,7 +47,7 @@ Vision based pest identification and control solution enables identification of 
 
 ## Demo Video
 
-
+[Demo Video available here.](./Demo_Video.mp4)
 
 ## The architecture
 
@@ -79,7 +76,7 @@ The project currently does the following things.
 
 See below for our proposed schedule on next steps after Call for Code 2021 submission.
 
-![Roadmap](./images/roadmap.jpg)
+![Roadmap](./roadmap.jpg)
 
 ## Live demo
 
