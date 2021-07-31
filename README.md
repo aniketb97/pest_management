@@ -90,6 +90,13 @@ You can find a running system to test at [this link](https://3.7.103.170/pestman
   <img src="https://contributors-img.web.app/image?repo=aniketb97/pest_management" />
 </a>
 
+
+All authors:
+[Jagadisa Padhy](https://github.com/jagadish4893) (Team Leader)  
+Shreyas Gawande  
+[Aniket Banginwar](https://github.com/aniketb97)
+
+
 ## License
 
 This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE) file for details.
