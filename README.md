@@ -49,6 +49,8 @@ Vision based pest identification and control solution enables identification of 
 
 [Demo Video available here.](./Demo_Video.mp4)
 
+[Youtube link to demo video.](https://youtu.be/VuGPAZwr_D4). Please change resolution if video is distorted. (Recommended: 480p)
+
 ## The architecture
 
 ![Video transcription/translation app](https://github.com/aniketb97/pest_management/blob/main/Architecture.png)
